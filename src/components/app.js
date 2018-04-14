@@ -7,6 +7,9 @@ import AboutUs from "./about_us";
 import SecretDocs from './secret_documents';
 import OperativesList from './operatives_list';
 import auth from '../hoc/auth';
+import SignUp from './sign_up';
+import SignIn from './sign_in';
+import Quotes from './quotes';
 
 const App = () => (
     <div className="container">
@@ -15,6 +18,9 @@ const App = () => (
         <Route path="/about-us" component={AboutUs}/>
         <Route path="/secret-docs" component={auth(SecretDocs)}/>
         <Route path="/operatives-list" component={OperativesList}/>
+        <Route path="/sign-up" component={SignUp}/>
+        <Route path="/sign-in" component={SignIn}/>
+        <Route path="/movie-quote" component={auth(Quotes)}/>
 
     </div>
 );
